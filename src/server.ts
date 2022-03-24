@@ -12,8 +12,8 @@ app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerFile));
 app.use(router);
 
 app.post("/courses", (request, response) => {
-  const { name } = request.body;
-  return response.json({ name });
+    const { name } = request.body;
+    return response.json({ name });
 });
 
 app.listen(3333, () => console.log("Server is running!"));
