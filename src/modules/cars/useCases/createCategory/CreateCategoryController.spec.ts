@@ -36,8 +36,8 @@ describe("Create Category Controller", () => {
         const response = await request(app)
             .post("/categories")
             .send({
-                name: "Category Supertest",
-                description: "Category Supertest",
+                name: "Category Supertester",
+                description: "Category Supertester",
             })
             .set({
                 Authorization: `Bearer ${token}`,
@@ -57,13 +57,12 @@ describe("Create Category Controller", () => {
         const response = await request(app)
             .post("/categories")
             .send({
-                name: "Category Supertest",
+                name: "Category Supertester",
                 description: "Category Supertest",
             })
             .set({
                 Authorization: `Bearer ${token}`,
             });
-
         expect(response.status).toBe(400);
     });
 });

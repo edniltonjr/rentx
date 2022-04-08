@@ -40,11 +40,11 @@ describe("Create a category", () => {
             name: category.name,
             description: category.description,
         });
-        await expect(() => {
+        await expect(
             createCategoryUseCase.execute({
                 name: category.name,
                 description: category.description,
-            });
-        }).rejects.toEqual(new AppError("Category already exists!"));
+            })
+        ).rejects.toEqual(new AppError("Category already exists!"));
     });
 });
