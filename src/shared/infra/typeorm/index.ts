@@ -11,3 +11,4 @@ export default async (): Promise<Connection> => {
         })
     );
 };
+console.log("");
