@@ -3,7 +3,7 @@ import request from "supertest";
 import { Connection } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
-import { app } from "@shared/infra/http/server";
+import { app } from "@shared/infra/http/app";
 import createConnection from "@shared/infra/typeorm";
 
 let connection: Connection;
